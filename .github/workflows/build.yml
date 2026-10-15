@@ -32,7 +32,7 @@ jobs:
             --flash_mode dio --flash_freq 80m --flash_size 8MB \
             0x0 bootloader/bootloader.bin \
             0x8000 partition_table/partition-table.bin \
-            0x10000 cardsynth.bin
+            0x10000 cardputer-adv.bin
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -40,6 +40,6 @@ jobs:
           name: cardsynth-firmware
           path: |
             build/cardsynth_full_0x0.bin
-            build/cardsynth.bin
+            build/cardputer-adv.bin
             build/bootloader/bootloader.bin
             build/partition_table/partition-table.bin
